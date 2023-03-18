@@ -1,0 +1,82 @@
+:root{
+  --primary-color:rgb(202, 102, 211);
+  --secundary-color: #4e1444;
+  --line-style: 10px solid var(--secundary-color);
+  --bg-color: #c6c6c6;
+  --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+  user-select: none;
+  background-color: var(--bg-color);
+}
+
+h1{
+  text-align: center;
+  font-size: 4rem;
+  font-family: var(--font-family);
+  color: var(--primary-color)
+}
+
+.gridContainer{
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  justify-content: center;
+}
+
+.square{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.middle{
+  border-left: var(--line-style);
+  border-right: var(--line-style)
+}
+
+.up{
+  border-bottom: var(--line-style);
+}
+
+.bottom{
+  border-top: var(--line-style);
+}
+
+.winner{
+  background-color: #fff;
+}
+
+dialog{
+  text-align: center;
+  font-size: 20px;
+  min-width: 50vh;
+  padding: 5rem;
+  border: unset;
+  border-radius: 20px;
+  background-color: #a7a7a7;
+  color: var(--secundary-color);
+  font-family: var(--font-family);
+}
+
+dialog button{
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+
+dialog button:hover{
+  background-color: #efcdea;
+  color: var(--secundary-color);
+}
+
+dialog::backdrop{
+  backdrop-filter: blur(10px);
+}
